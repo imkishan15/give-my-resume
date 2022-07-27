@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React from 'react'
+import Standard from './resume-components/standard/Standard';
+import Homepage from './ui-components/CreateResume';
+import Formdata from './ui-components/Formdata';
 function App() {
+  const [name, setName] = React.useState('')
+  const ref = React.createRef()
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div>
+      <div className='d-flex m-10' style={{ margin: "5em 7em" }}>
+        <div className=''>
+          <Homepage />
+        </div>
+        <div className=''>
+          <Formdata />
+        </div>
+
+      </div>
+
+    </div >
   );
 }
 
